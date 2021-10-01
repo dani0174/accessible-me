@@ -14,8 +14,11 @@
 
 <body>
   <ul class="skip-links">
-    <li><a href="#main-nav">Skip to main nav</a></li>
-    <li><a href="#main-content">Skip to main content</a></li>
+    <li><a href="#main-nav">Skip to Navigation</a></li>
+    <li><a href="#main-content">Skip to Main Content</a></li>
+    <li><a href="#owner">Skip to Meet the Owner Info</a></li>
+    <li><a href="#location">Skip to Location Info</a></li>
+    <li><a href="#contact-us">Skip to Contact Us Form</a></li>
   </ul>
 
   <div class="container" id="top">
@@ -24,7 +27,7 @@
     <header class="site-header" role="banner">
       <h1 role="heading">Jam Box Studios</h1>
       <!-- Top Navigation Content -->
-      <nav class="main-nav" role="navigation">
+      <nav class="main-nav" role="navigation" id="main-nav">
         <ul>
           <li><a href="#top" aria-label="Home Nav Button" title="Home Nav Button" aria-current="true" class="active">Home</a></li>
           <li><a href="#top" aria-label="Products Nav Button"title="Products Nav Button">Products</a></li>
@@ -33,38 +36,42 @@
         </ul>
       </nav>
       <br>
-      <img src="https://placekitten.com/1200/900" class="banner" title="Four Fluffy Kittens" alt="Image of 4 kittens in a basket.">
+      <img src="https://placekitten.com/1200/900" class="banner" title="Cat-related images." alt="Cat-related images.">
     </header>
 
     <!-- =============== Main Section =============== -->
-    <main class="main-content" role="main">
+    <main class="main-content" role="main" id="main-content">
       <h2 role="heading">Welcome to Jam Box</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-
+      <br>
       <div class="grid-container">
       <!-- Meet the Owner Content -->  
       <section class="owner">
-        <h2 role="heading">Meet the Owner</h2>
-        <ul itemscope itemtype="https://schema.org/Person">
+        <h2 role="heading" id="owner">Meet the Owner</h2>
+        <ul class="owner-contact-items" itemscope itemtype="https://schema.org/Person">
           <li itemprop="name">John Doe</li>
           <li itemprop="jobTitle"><abbr title="Chief Executive Officer">CEO</abbr></li>
-          <li itemprop="email">johnjoe@jambox.ca</li>
+          <li itemprop="email"><a href=mailto:johnjoe@jambox.ca>johnjoe@jambox.ca</a></li>
           <li itemprop="telephone">613-000-0000</li>
         </ul>
-        <h2 role="heading">Address</h2>
+        <br>
+        <h2 role="heading">Location</h2>
         <!-- Location Content --> 
-        <address>
-          <ul itemscope itemtype="https://schema.org/PostalAddress">
+        <address id="location">
+          <ul class="owner-address-items" itemscope itemtype="https://schema.org/PostalAddress">
             <li itemprop="name">Jambox Studios</li>
             <li itemprop="streetAddress">123 Guitar Road</li>
             <li itemprop="addressLocality">Musicville, Danceistan</li>
             <li itemprop="postalCode">B3T 0L0</li>
           </ul>
+          <br>
+          <iframe class="google-maps-element" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206091.37549139225!2d-86.92532606204314!3d36.186558900188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8864ec3213eb903d%3A0x7d3fb9d0a1e9daa0!2sNashville%2C%20TN%2C%20USA!5e0!3m2!1sen!2sca!4v1633103106372!5m2!1sen!2sca" width="400" height="225" style="border: 1px;" allowfullscreen="" loading="lazy"></iframe>
         </address>
+        <br>
       </section>
       <!-- Contact Us Content -->
-      <section class="contact-section">
+      <section class="contact-section" id="contact-us">
         <h2 role="heading">Contact Us</h2>
         <form action="thanks.html">
           <label for="firstname">First Name</label>
@@ -75,11 +82,10 @@
           <input type="email" id="email" name="email" placeholder="Email">
           <label for="subject">Subject</label>
           <input type="text" id="subject" name="subject" placeholder="Subject">
-          <label for="message">Your Message</label>
           <textarea placeholder="Your Message"></textarea>
           <div class="form-flexbox">
-          <button type="submit" title="Submit" form="form1" value="Submit" aria-label="Submit your completed contact us form to Jam Box Studios.">Submit</button>
-          <button type="reset" title="Reset" aria-label="Reset the form content." value="Reset">Reset</button>
+          <button type="submit" form="form1" value="Submit" aria-label="Submit your completed contact us form to Jam Box Studios.">Submit</button>
+          <button type="reset" aria-label="Reset the form content." value="Reset">Reset</button>
           </div>
         </form>
       </section>
@@ -90,6 +96,7 @@
     <footer class="site-footer" role="contentinfo">
       <div class="copyright">
         <p>&copy; 2021 Jam Box Studios</p> 
+        <br>
         <a aria-label="Back to Top Link"title="Back to Top Link" href="#top">Back to Top</a>
       </div>
     </footer>

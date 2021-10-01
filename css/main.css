@@ -1,4 +1,55 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ================================================================================== */
+/* =============== MTM6201 "Accessible Me" Assignment by Mark Daniels =============== */
+/* ================================================================================== */
 
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
@@ -29,6 +80,14 @@ img {
 
 h1 {
   padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .main-nav ul {
@@ -87,6 +146,8 @@ form {
  }
 
 .site-footer {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 1rem 0;
 }
@@ -135,6 +196,18 @@ ul {
   background-color: silver;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.main-content h2, p {
+  padding: 5px;
+  align-self: center;
+  justify-self: center;
+}
+
 header, footer {
   background-color: grey;
 }
@@ -142,6 +215,8 @@ header, footer {
 @media screen and (min-width: 760px) {
   .grid-container {
     display: grid;
+    width: 95%;
+    align-self: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 1em;
@@ -154,7 +229,13 @@ a:hover, button:hover {
 }
 
 /* selected link */
-a:active, button:active, li:active {
+a:active, button:active {
+  color:  white;
+  background-color: black;
+}
+
+/* selected link */
+.main-nav li:active {
   color:  white;
   background-color: black;
 }
@@ -164,4 +245,30 @@ a:active, button:active, li:active {
   justify-content: space-evenly;
 }
 
-/* Comments.... */
+.owner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.owner h2 {
+  align-self: flex-start;
+}
+
+.owner-contact-items li {
+  padding-left: 5%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.owner-address-items li {
+  padding-left: 5%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.google-maps-element {
+  padding-left: 5%;
+}
+
+/* Comments... I love comments!  }:-) */
