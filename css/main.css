@@ -271,4 +271,8 @@ a:active, button:active {
   padding-left: 5%;
 }
 
+.owner-contact-items a {
+  color: black;
+}
+
 /* Comments... I love comments!  }:-) */

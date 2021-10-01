@@ -28,15 +28,15 @@
       <h1 role="heading">Jam Box Studios</h1>
       <!-- Top Navigation Content -->
       <nav class="main-nav" role="navigation" id="main-nav">
-        <ul>
-          <li><a href="#top" aria-label="Home Nav Button" title="Home Nav Button" aria-current="true" class="active">Home</a></li>
-          <li><a href="#top" aria-label="Products Nav Button"title="Products Nav Button">Products</a></li>
-          <li><a href="#top" aria-label="Reservations Nav Button" title="Reservations Nav Button">Reservation</a></li>
-          <li><a href="#top" aria-label="Studio Nav Button" title="Studio Nav Button">Studio</a></li>
+        <ul role="menubar">
+          <li><a role="menuitem" href="#top" aria-label="Home Nav Button" title="Home Nav Button" aria-current="true" class="active">Home</a></li>
+          <li><a role="menuitem" href="#top" aria-label="Products Nav Button" title="Products Nav Button">Products</a></li>
+          <li><a role="menuitem" href="#top" aria-label="Reservations Nav Button" title="Reservations Nav Button">Reservation</a></li>
+          <li><a role="menuitem" href="#top" aria-label="Studio Nav Button" title="Studio Nav Button">Studio</a></li>
         </ul>
       </nav>
       <br>
-      <img src="https://placekitten.com/1200/900" class="banner" title="Cat-related images." alt="Cat-related images.">
+      <img role="img" src="https://placekitten.com/1200/900" class="banner" title="Cat-related images." alt="Cat-related images.">
     </header>
 
     <!-- =============== Main Section =============== -->
@@ -49,24 +49,24 @@
       <!-- Meet the Owner Content -->  
       <section class="owner">
         <h2 role="heading" id="owner">Meet the Owner</h2>
-        <ul class="owner-contact-items" itemscope itemtype="https://schema.org/Person">
+        <ul role="group" class="owner-contact-items" itemscope itemtype="https://schema.org/Person">
           <li itemprop="name">John Doe</li>
-          <li itemprop="jobTitle"><abbr title="Chief Executive Officer">CEO</abbr></li>
-          <li itemprop="email"><a href=mailto:johnjoe@jambox.ca>johnjoe@jambox.ca</a></li>
+          <li itemprop="jobTitle"><abbr title="Chief Executive Officer" role="definition">CEO</abbr></li>
+          <li itemprop="email"><a aria-label="Create a new email to the owner" role="button" href=mailto:johnjoe@jambox.ca>johnjoe@jambox.ca</a></li>
           <li itemprop="telephone">613-000-0000</li>
         </ul>
         <br>
         <h2 role="heading">Location</h2>
         <!-- Location Content --> 
         <address id="location">
-          <ul class="owner-address-items" itemscope itemtype="https://schema.org/PostalAddress">
+          <ul role="group" class="owner-address-items" itemscope itemtype="https://schema.org/PostalAddress">
             <li itemprop="name">Jambox Studios</li>
             <li itemprop="streetAddress">123 Guitar Road</li>
             <li itemprop="addressLocality">Musicville, Danceistan</li>
             <li itemprop="postalCode">B3T 0L0</li>
           </ul>
           <br>
-          <iframe class="google-maps-element" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206091.37549139225!2d-86.92532606204314!3d36.186558900188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8864ec3213eb903d%3A0x7d3fb9d0a1e9daa0!2sNashville%2C%20TN%2C%20USA!5e0!3m2!1sen!2sca!4v1633103106372!5m2!1sen!2sca" width="400" height="225" style="border: 1px;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe alt="Embedded GoogleMaps image of the fictitious business location." class="google-maps-element" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206091.37549139225!2d-86.92532606204314!3d36.186558900188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8864ec3213eb903d%3A0x7d3fb9d0a1e9daa0!2sNashville%2C%20TN%2C%20USA!5e0!3m2!1sen!2sca!4v1633103106372!5m2!1sen!2sca" width="400" height="225" style="border: 1px;" allowfullscreen="" loading="lazy"></iframe>
         </address>
         <br>
       </section>
@@ -75,17 +75,18 @@
         <h2 role="heading">Contact Us</h2>
         <form action="thanks.html">
           <label for="firstname">First Name</label>
-          <input type="text" id="firstname" name="firstname" placeholder="First Name">
+          <input type="text" id="firstname" placeholder="First Name">
           <label for="lastname">Last Name</label>
-          <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+          <input type="text" id="lastname" placeholder="Last Name">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Email">
+          <input type="email" id="email" placeholder="Email">
           <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="Subject">
-          <textarea placeholder="Your Message"></textarea>
+          <input type="text" id="subject" placeholder="Subject">
+          <label for="message">Your Message</label>
+          <textarea placeholder="Your Message" id="message"></textarea>
           <div class="form-flexbox">
-          <button type="submit" form="form1" value="Submit" aria-label="Submit your completed contact us form to Jam Box Studios.">Submit</button>
-          <button type="reset" aria-label="Reset the form content." value="Reset">Reset</button>
+          <button role="button" type="submit" value="Submit" aria-label="Submit your completed contact us form to Jam Box Studios.">Submit</button>
+          <button role="button" type="reset" aria-label="Reset all of the form fields." value="Reset">Reset</button>
           </div>
         </form>
       </section>
@@ -97,7 +98,7 @@
       <div class="copyright">
         <p>&copy; 2021 Jam Box Studios</p> 
         <br>
-        <a aria-label="Back to Top Link"title="Back to Top Link" href="#top">Back to Top</a>
+        <a role="button" aria-label="Back to Top Link" title="Back to Top Link" href="#top">Back to Top</a>
       </div>
     </footer>
   </div>
